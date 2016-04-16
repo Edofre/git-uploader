@@ -61,6 +61,8 @@ if confirm_prompt == 'y':
         local_file = open(formatted_file, 'rb')
         ftp.storlines("STOR "+file_name, local_file)
         local_file.close()
+
+    ftp.close()
     print("All files uploaded")
 else:
     print("No files uploaded")
